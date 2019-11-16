@@ -7,25 +7,26 @@
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="utf-8">
   
-  <title>#推荐#软技能 | ToniFF</title>
+  <title>Three.js扩展材质 | ToniFF</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="computer graphics,unity,shader">
+    <meta name="keywords" content="Three.js, MeshStandardMaterial,">
   
 
-  <meta name="description" content="#软技能——代码之外的生存指南 上个月在公司书架上发现了一本其貌不扬的绿色小书，书名挺没意思的，打开来一看目录， WOW！  第 1 章　为何这本书与你先前读过的任何书籍都迥然不同　 1第一篇　职业　 5第 2 章　从非同凡响开始：绝不要做他人都在做的事　 7第 3 章　思考未来：你的目标是什么　 10第 4 章　人际交往能力：远比你想象的重要　 14第 5 章　破解面试之道　 18第 6 章　就">
+  <meta name="description" content="#科学地扩展 Three.js 原生材质不知道怎么用中文描述这个话题，如果是英文的话，大概是”How to customize three.js’s native materials.”。 ###Why现在 PBR 的工作流非常流行，对实时渲染质量要求比较高的一般用一套 StandardMaterial 就可以走天下了。但随着开发深入，对材质难免有修改的地方。我们项目改的地方比较多，为了调试方便，">
+<meta name="keywords" content="Three.js, MeshStandardMaterial">
 <meta property="og:type" content="article">
-<meta property="og:title" content="#推荐#软技能">
-<meta property="og:url" content="https://toniff.github.io/2019/10/21/推荐-软技能/index.html">
+<meta property="og:title" content="Three.js扩展材质">
+<meta property="og:url" content="https://toniff.github.io/2019/11/11/Three-js扩展材质/index.html">
 <meta property="og:site_name" content="ToniFF">
-<meta property="og:description" content="#软技能——代码之外的生存指南 上个月在公司书架上发现了一本其貌不扬的绿色小书，书名挺没意思的，打开来一看目录， WOW！  第 1 章　为何这本书与你先前读过的任何书籍都迥然不同　 1第一篇　职业　 5第 2 章　从非同凡响开始：绝不要做他人都在做的事　 7第 3 章　思考未来：你的目标是什么　 10第 4 章　人际交往能力：远比你想象的重要　 14第 5 章　破解面试之道　 18第 6 章　就">
+<meta property="og:description" content="#科学地扩展 Three.js 原生材质不知道怎么用中文描述这个话题，如果是英文的话，大概是”How to customize three.js’s native materials.”。 ###Why现在 PBR 的工作流非常流行，对实时渲染质量要求比较高的一般用一套 StandardMaterial 就可以走天下了。但随着开发深入，对材质难免有修改的地方。我们项目改的地方比较多，为了调试方便，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-26T14:07:02.619Z">
+<meta property="og:updated_time" content="2019-11-16T05:39:41.207Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="#推荐#软技能">
-<meta name="twitter:description" content="#软技能——代码之外的生存指南 上个月在公司书架上发现了一本其貌不扬的绿色小书，书名挺没意思的，打开来一看目录， WOW！  第 1 章　为何这本书与你先前读过的任何书籍都迥然不同　 1第一篇　职业　 5第 2 章　从非同凡响开始：绝不要做他人都在做的事　 7第 3 章　思考未来：你的目标是什么　 10第 4 章　人际交往能力：远比你想象的重要　 14第 5 章　破解面试之道　 18第 6 章　就">
+<meta name="twitter:title" content="Three.js扩展材质">
+<meta name="twitter:description" content="#科学地扩展 Three.js 原生材质不知道怎么用中文描述这个话题，如果是英文的话，大概是”How to customize three.js’s native materials.”。 ###Why现在 PBR 的工作流非常流行，对实时渲染质量要求比较高的一般用一套 StandardMaterial 就可以走天下了。但随着开发深入，对材质难免有修改的地方。我们项目改的地方比较多，为了调试方便，">
 
   
 
@@ -161,14 +162,14 @@ ga('send', 'pageview');
 
 
 <div class="content content-post CENTER">
-   <article id="post-推荐-软技能" class="article article-type-post" itemprop="blogPost">
+   <article id="post-Three-js扩展材质" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">#推荐#软技能</h1>
+    <h1 class="post-title">Three.js扩展材质</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2019.10.21</span>
+        <span>2019.11.11</span>
       </span>
 
       
@@ -196,12 +197,11 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <p>#软技能——代码之外的生存指南</p>
-<p>上个月在公司书架上发现了一本其貌不扬的绿色小书，书名挺没意思的，打开来一看目录， WOW！</p>
-<blockquote>
-<p>第 1 章　为何这本书与你先前读过的任何书籍都迥然不同　 1<br>第一篇　职业　 5<br>第 2 章　从非同凡响开始：绝不要做他人都在做的事　 7<br>第 3 章　思考未来：你的目标是什么　 10<br>第 4 章　人际交往能力：远比你想象的重要　 14<br>第 5 章　破解面试之道　 18<br>第 6 章　就业选择：列出你的选择　 23<br>第 7 章　你是哪类软件开发人员　 28<br>第 8 章　公司与公司是不一样的　 33<br>第 9 章　攀登晋升阶梯　 38<br>第 10 章　成为专业人士　 42<br>第 11 章　赢得自由——如何辞职　 47<br>第 12 章　成为自由职业者：开启自己的一片天地　 54<br>第 13 章　创建你的第一个产品　 60<br>第 14 章　你打算开始创业吗　 65<br>第 15 章　远程工作的生存策略　 70<br>第 16 章　假装自己能成功　 74<br>第 17 章　单调乏味的简历——如何修改　 77<br>第 18 章　请勿陷入对技术的狂热之中　 81<br>第二篇　自我营销　 85<br>第 19 章　针对“码农”的营销基础课　 87<br>第 20 章　打造引人注目的品牌　 92<br>第 21 章　创建大获成功的博客　 97<br>第 22 章　你的主要目标：为他人增加价值　 104<br>第 23 章　善于运用社交媒体　 107<br>第 24 章　演讲、报告和培训：做“说话的极客”　 112<br>第 25 章　著书立说，吸引追随者　 117<br>第 26 章　百折不挠，越挫越勇　 121<br>第三篇　学习　 125<br>第 27 章　学习怎样学习：如何自我教育　 127<br>第 28 章　我的“十步学习法”　 130<br>第 29 章　第 1 步到第 6 步：这些步骤只做一次　 133<br>第 30 章　第 7 步到第 10 步：循环往复　 140<br>第 31 章　寻找导师：找到你的尤达　 145<br>第 32 章　开山收徒：成为尤达一样的大师　 150<br>第 33 章　传道授业：若要学知识，必得为人师　 153<br>第 34 章　你需要一个学位吗，还是可以对此忽略不计　 157<br>第 35 章　发现自己的知识短板　 161<br>第四篇　生产力　 165<br>第 36 章　一切始于专注　 167<br>第 37 章　我的私房“生产力提升计划”　 171<br>第 38 章　番茄工作法　 177<br>第 39 章　我的“定额工作法”：我是如何做到超额完成工作的　 183<br>第 40 章　对自己负责　 187<br>第 41 章　要不要多任务并行　 191<br>第 42 章　职业倦怠：我已找到解药　 195<br>第 43 章　时间是怎样被浪费掉的　 200<br>第 44 章　形成惯例的重要性　 205<br>第 45 章　培养习惯：刷新你的代码　 209<br>第 46 章　分解任务：如何吃掉一头大象　 214<br>第 47 章　努力工作的价值，以及为什么你总是逃避努力工作　 219<br>第 48 章　任何行动都比不采取行动好　 223<br>第五篇　理财　 229<br>第 49 章　怎样支配你的薪水　 231<br>第 50 章　怎样进行薪酬谈判　 236<br>第 51 章　期权：所有乐趣之所在　 243<br>第 52 章　房地产投资面面观　 250<br>第 53 章　你真的了解自己的退休计划吗　 256<br>第 54 章　债务的危害：社保债务代价昂贵　 263<br>第 55 章　额外馈赠：我是如何做到 33 岁退休的　 267<br>第六篇　健身　 279<br>第 56 章　为什么需要破解自己的健康密码　 281<br>第 57 章　设定你的健身标准　 285<br>第 58 章　热力学、热量和你　 289<br>第 59 章　动力：让你的屁股离开椅子　 294<br>第 60 章　如何增长肌肉：书呆子也能拥有强健的肌肉　 298<br>第 61 章　如何获得完美腹肌　 305<br>第 62 章　启动跑步程序　 308<br>第 63 章　站立式办公及其他窍门　 311<br>第 64 章　高科技健身装备：极客现身　 315<br>第七篇　精神　 319<br>第 65 章　心灵是如何影响身体的　 321<br>第 66 章　拥有正确的心态：重新启动　 325<br>第 67 章　构建一个积极的自我形象——规划你的大脑　 330<br>第 68 章　爱情与恋爱：计算机无法牵着你的手　 335<br>第 69 章　我的私房成功书单　 339<br>第 70 章　积极面对失败　 344<br>第 71 章　结束语　 348<br>附录 A 　如果你能写代码，你就能理解金融　 350<br>附录 B 　股市是如何运作的：系统的游戏规则　 356<br>附录 C 　垃圾进来，垃圾出去：饮食和营养基础知识　 362<br>附录 D 　如何吃出健康来：比萨并不是一个食物组　 366</p>
-</blockquote>
-<p>我把所有的目录都贴出来没有任何省略，因为这个包罗万象的目录真的值得你读一遍。做一个每天&gt;=12 小时在公司的程序员，容易忽略生活中的很多东西。比如这个目录里的内容，没有一点与如何写程序有关，但是他们在生活中的重要性却不比如何写程序要低。<br>这是我的第一篇博客，也部分出于本书第二篇的“push”。至于读后感，我暂时没有打算更新。我生活经验太少，不会比作者多知道什么。虽然只是刚开始读，至少我已经写了这篇没有内容的博客，把我的工资从借记卡里转移到了理财通。</p>
+      <p>#科学地扩展 Three.js 原生材质<br>不知道怎么用中文描述这个话题，如果是英文的话，大概是”How to customize three.js’s native materials.”。</p>
+<p>###Why<br>现在 PBR 的工作流非常流行，对实时渲染质量要求比较高的一般用一套 StandardMaterial 就可以走天下了。但随着开发深入，对材质难免有修改的地方。我们项目改的地方比较多，为了调试方便，直接把原来的 shader copy 了一遍再尽情魔改。整体仍然是遵循 PBR 流程，贴图 uniforms 也只是在原来的基础上加了一些。<br>如果把这套新的 shader 直接塞进 ShaderMaterial 中，work 是肯定没问题，但是传变量就会从 native 材质的<code>material.map</code>变成<code>material.uniforms.map.value</code>这样非常不痛快的形式。native 材质之所以可以直接用 map，是因为 WebGLRenderer 有帮它做操作。具体可以查看我在 Three.js 的 forum 上问的这个问题里 Mugen87 的回答：<br><a href="https://discourse.threejs.org/t/where-do-materials-properties-come/10197" target="_blank" rel="noopener">https://discourse.threejs.org/t/where-do-materials-properties-come/10197</a></p>
+<p>###How<br>核心即 material 的<code>onBeforeCompile</code>方法，这个函数让你可以在材质 shader 编译前对其暴改。<br>Three.js 的 shader 只有三个属性，<code>uniforms</code>、<code>vertexShader</code>、<code>fragmentShader</code>。<br><code>vertexShader</code>和<code>fragmentShader</code>都是字符串，可以用任意字符串操作尽情修改。一般如果只需要改一两行的话用 replace 或者前后加些语句修改即可，比如 EliasHastle 提供的清晰易懂的 fiddle 示例：<a href="https://jsfiddle.net/EliasHasle/btz6jq83/32/" target="_blank" rel="noopener">https://jsfiddle.net/EliasHasle/btz6jq83/32/</a><br>因为我们是整套 copy 下来改，所以直接给这俩字符串重新赋值了。自定义的 shader 可以写在其它文件中导出常量。<br><code>uniforms</code>是对象形式，如果要添加的<code>uniforms</code>不多，也是照 fiddle 示例添加即可。如果是在自定义 shader 里写好了整块的<code>uniforms</code>想要直接赋值，要注意引用问题，多个材质实例引用同一个<code>uniforms</code>对象就糟糕了，<code>UniformsUtils</code>提供<code>clone</code>方法，我是直接在继承的自定义材质类里定义了。<br>由于场景整体的一些渲染操作比如<code>OIT</code>、<code>后处理</code>等可能也需要改动材质，所以有需要的话最好把<code>onBeforeCompile</code>写成单独的 public 函数 bind 上去，方便其它操作给<code>onBeforecompile</code>传函数时可以在函数体内调用原修改函数。</p>
+<p>刚开始写博客，超级流水账，赋段代码总结：</p>
+<figure class="highlight ts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> myStandardMaterial <span class="keyword">extends</span> THREE.MeshStandardMaterial &#123;</span><br><span class="line">  uniforms = &#123;...&#125;;</span><br><span class="line">  myOnBeforeCompile = <span class="function">(<span class="params">shader: THREE.Shader</span>) =&gt;</span> &#123;</span><br><span class="line">    shader.uniforms = <span class="keyword">this</span>.uniforms;</span><br><span class="line">    shader.vertexShader = myShader.vertexShader;</span><br><span class="line">    shader.fragmentShader = myShader.fragmentShader;</span><br><span class="line">  &#125;;</span><br><span class="line">  <span class="keyword">constructor</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="keyword">super</span>();</span><br><span class="line">    <span class="keyword">this</span>.onBeforeCompile = <span class="keyword">this</span>.myOnBeforeCompile.bind(<span class="keyword">this</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
     
   </div>
@@ -239,10 +239,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2019/03/05/hello-world/">
+    <a class="show pull-left" href="/2019/10/29/Simple-environment-for-TypeScript-Three-js-Webpack-for-beginners/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2019/10/29/Simple-environment-for-TypeScript-Three-js-Webpack-for-beginners/">
+    <a class="hide pull-right" href="/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
